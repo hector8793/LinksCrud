@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="logout">
+            <button>
+                SIGNUP
+            </button>
+        </div>
+        <div class="logo-container">
+            <img src="/assets/img/logo.svg" alt="">
+        </div>
+        <div class="card">
+            <form [formGroup]="login">
+                <h1>Login</h1>
+                <div class="form-group">
+                    <label for="Email">Your Email</label>
+                    <input type="email" class="form-control" id="Email" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input type="password" class="form-control" id="Password" placeholder="Password">
+                </div>
+                <div class="button-container">
+                    <button>
+                        Login
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

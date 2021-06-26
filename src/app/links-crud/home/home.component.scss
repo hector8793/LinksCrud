@@ -1,0 +1,192 @@
+.container{
+    .row{
+        .logout{
+            position:absolute;
+            button{
+                height: 64px;
+                width: 168px;
+                right: 120px;
+                top: 48px;
+                position: fixed;
+                font-family: Montserrat-Regular;
+                font-style: normal;
+                font-weight: bold;
+                border-radius: 4px;
+                border: 2px solid #007AFF;
+                box-sizing: border-box;
+                border-radius: 4px;
+                color: #007AFF;
+                background-color: #fff;
+                font-weight: 600;
+            }
+        }
+        .logo-container{
+            margin-top: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            padding-left: 0px;
+            width: 100%;
+            height: 229px;
+            img{
+                margin-left: 67px;
+            }
+        }
+        .home{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .profile{
+                width: 336px;
+                height: 336px;
+                background: #FFFFFF;
+                box-shadow: 0px 0px 30px rgba(199, 199, 199, 0.55);
+                border-radius: 6px;
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                img{
+                    margin-top: 40px;
+                    width: 128px;
+                    height: 128px;
+                    margin-bottom: 16px;
+                }
+                p{
+                    height: 20px;
+                    top: calc(50% - 20px/2 - 102px);
+                    font-family: Montserrat-SemiBold;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 20px;
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 0.25px;
+                    text-align: center;
+                }
+            }
+            .data{
+                margin-left: 48px;
+                width: 936px;
+                .card{
+                    width: 936px;
+                    height: 312px;
+                    background: #FFFFFF;
+                    box-shadow: 0px 0px 30px rgba(199, 199, 199, 0.55);
+                    border-radius: 6px;
+                    background: #FFFFFF;
+                    border: 1px solid transparent;
+                    form{
+                        margin-left: 64px;
+                        margin-top: 34px;
+                        .form-group{
+                            label{
+                                font-family: Montserrat-SemiBold;
+                                font-style: normal;
+                                font-weight: normal;
+                                font-size: 18px;
+                            }
+                            input{
+                                background: #FFFFFF;
+                                border: 1px solid #DDDDDD;
+                                box-sizing: border-box;
+                                border-radius: 4px;
+                                height: 64px;
+                                width: 792px;
+                                border-radius: 4px;
+                                color:#333333;
+                                font-weight: bold;
+                            }
+                        } 
+                        .mt{
+                            margin-top: 10px;
+                        }
+                        .button-container{ 
+                            position: relative;
+                            margin-top: 20px;
+                            float: right;
+                            margin-right: 80px;
+                            button{
+                                font-family: Montserrat-Regular;
+                                font-style: normal;
+                                font-weight: normal;
+                                align-items: center;
+                                text-align: center;
+                                font-size: 14px;
+                                height: 48px;
+                                width: 222px;
+                                margin-left: auto;
+                                margin-right: auto;
+                                position: relative;
+                                background: #007AFF;
+                                border-radius: 4px;
+                                border: 1px solid #007AFF;
+                                color: #fff;
+                            }
+                            p{ 
+                                /* Caption / Montserrat */
+                                font-family: Montserrat-Light;
+                                font-style: normal;
+                                font-weight: bold;
+                                font-size: 12px;
+                                align-items: center;
+                                letter-spacing: 0.4px;
+                                width: 264px;
+                                margin-left: auto;
+                                margin-right: auto;
+                                position: relative;
+                                margin-top: 18px;
+                                a{
+                                    color: #007AFF;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .container-link{
+                    .link-card{
+                        margin-top:16px;
+                        margin-bottom: 16px;
+                        padding: 23px;
+                        width: 936px;
+                        height: 128px;
+                        left: 424px;
+                        top: 552px;
+                        background: #FFFFFF;
+                        box-shadow: 0px 0px 30px rgba(199, 199, 199, 0.55);
+                        border-radius: 6px;
+                        .delete{
+                            float: right;
+                            position: initial;
+                        }
+                        h2{
+                            height: 20px;
+                            font-family: Montserrat-SemiBold;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 36px;
+                            line-height: 20px;
+                            display: flex;
+                            align-items: center;
+                            letter-spacing: 0.25px;
+                            color: #008DF3;
+                        }
+                        p{
+                            height: 40px;
+                            font-family: Montserrat-SemiBold;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 18px;
+                            line-height: 20px;
+                            display: flex;
+                            align-items: center;
+                            letter-spacing: 0.25px;
+                            color: #333333;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
