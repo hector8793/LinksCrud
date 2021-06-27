@@ -42,20 +42,22 @@ export class HomeComponent implements OnInit {
   }
   
   addLink(){
-    console.log("enviando link");
-    let body = {
-      "url": this.linkForm.controls.url.value,
-      "name": this.linkForm.controls.name.value
+    if(this.linkForm.valid){
+      console.log("enviando link");
+      let body = {
+        "url": this.linkForm.controls.url.value,
+        "name": this.linkForm.controls.name.value
+      }
+      this.apisService.createLink(body).subscribe((resp: any)=>{
+        this.Links.push(body)
+        this.linkForm.controls.url.setValue("")
+        this.linkForm.controls.name.setValue("")
+      },error=>{
+        this.Links.push(body)
+        this.linkForm.controls.url.setValue("")
+        this.linkForm.controls.name.setValue("")
+      })
     }
-    this.apisService.createLink(body).subscribe((resp: any)=>{
-      this.Links.push(body)
-      this.linkForm.controls.url.setValue("")
-      this.linkForm.controls.name.setValue("")
-    },error=>{
-      this.Links.push(body)
-      this.linkForm.controls.url.setValue("")
-      this.linkForm.controls.name.setValue("")
-    })
   }
   
   deleteLink(id: any){

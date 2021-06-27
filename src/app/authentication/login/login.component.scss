@@ -79,6 +79,10 @@
                     margin-right: auto;
                     position: relative;
                     margin-top: 20px;
+                    button:disabled,button[disabled]{
+                        background: #979797;
+                        border: 1px solid #979797;
+                    }
                     button{
                         font-family: Montserrat-Regular;
                         font-style: normal;
@@ -97,6 +101,7 @@
                         color: #fff;
                         cursor: pointer;
                     }
+                    
                 }
             }
         }

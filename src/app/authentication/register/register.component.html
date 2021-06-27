@@ -28,7 +28,7 @@
                     <input formControlName="password" type="password" class="form-control" id="Password" placeholder="Password">
                 </div>
                 <div class="button-container">
-                    <button (click)="sendRegister()">
+                    <button (click)="sendRegister()"  [disabled]="!this.register.valid">
                         SIGNUP 
                     </button>
                     <p>

@@ -107,6 +107,10 @@
                             margin-top: 20px;
                             float: right;
                             margin-right: 80px;
+                            button:disabled,button[disabled]{
+                                background: #979797;
+                                border: 1px solid #979797;
+                            }
                             button{
                                 font-family: Montserrat-Regular;
                                 font-style: normal;

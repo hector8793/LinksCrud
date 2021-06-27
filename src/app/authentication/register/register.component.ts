@@ -40,17 +40,19 @@ export class RegisterComponent implements OnInit {
   }
 
   sendRegister(){
-    console.log("enviando register");
-    let body = {
-      "name": this.register.controls.name.value,
-      "email": this.register.controls.email.value,
-      "password": this.register.controls.password.value
-    }
-    this.apisService.sendRegister(body).subscribe((resp: any)=>{
-      if(resp["id"] != null || resp["id"] != undefined){
-        this.route.navigate(['login'])
+    if(this.register.valid){
+      console.log("enviando register");
+      let body = {
+        "name": this.register.controls.name.value,
+        "email": this.register.controls.email.value,
+        "password": this.register.controls.password.value
       }
-    })
+      this.apisService.sendRegister(body).subscribe((resp: any)=>{
+        if(resp["id"] != null || resp["id"] != undefined){
+          this.route.navigate(['login'])
+        }
+      })
+    }
   }
 
   goLogin(){

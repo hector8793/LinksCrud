@@ -32,7 +32,7 @@
                             <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                         </div>
                         <div class="button-container">
-                            <button (click)="addLink()">
+                            <button (click)="addLink()" [disabled]="!this.linkForm.valid">
                                 ADD
                             </button>
                         </div>

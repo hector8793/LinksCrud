@@ -33,18 +33,20 @@ export class LoginComponent implements OnInit {
   }
 
   sendLogin(){
-    console.log("enviando login");
-    let body = {
-      "email": this.login.controls.email.value,
-      "password": this.login.controls.password.value
-    }
-    this.apisService.getLogin(body).subscribe((resp: any)=>{
-      if(resp["token"] != null || resp["token"] != undefined){
-        let token = resp["token"]
-        this.storeService.set("isLoggedIn", token)
-        this.route.navigate(['home'])
+    if(this.login.valid){
+      console.log("enviando login");
+      let body = {
+        "email": this.login.controls.email.value,
+        "password": this.login.controls.password.value
       }
-    })
+      this.apisService.getLogin(body).subscribe((resp: any)=>{
+        if(resp["token"] != null || resp["token"] != undefined){
+          let token = resp["token"]
+          this.storeService.set("isLoggedIn", token)
+          this.route.navigate(['home'])
+        }
+      })
+    }
   }
 
   goRegister(){

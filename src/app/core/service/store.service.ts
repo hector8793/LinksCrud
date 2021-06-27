@@ -50,6 +50,7 @@ export class StoreService {
   deleteKey(keys: any) {
     const key = btoa(keys);
     this.sessionStorage.clear(key);
+    this.sessionStorage.clear();
   }
 
   logout() {
