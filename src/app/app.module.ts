@@ -23,7 +23,8 @@ import { LinksCrudModule } from './links-crud/links-crud.module';
     CoreModule,
     SharedModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxWebstorageModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

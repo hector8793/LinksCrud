@@ -16,7 +16,7 @@ export class JwtInterceptor implements HttpInterceptor {
             console.log(this.storeService.get("isLoggedIn"));
             request = request.clone({
                 setHeaders: {
-                    'Authorization': `${this.storeService.get("isLoggedIn")}`
+                    'Token': `${this.storeService.get("isLoggedIn")}`
                 }
             });
         }

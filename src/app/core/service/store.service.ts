@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import * as CryptoJS from 'crypto-js';
 import { SessionStorageService } from 'ngx-webstorage';
 
@@ -7,7 +8,7 @@ import { SessionStorageService } from 'ngx-webstorage';
 })
 
 export class StoreService {
-  constructor(private sessionStorage: SessionStorageService) { }
+  constructor(private sessionStorage: SessionStorageService,private route: Router) { }
 
   // The set method is use for encrypt the value.
   set(keys: any, value: any) {
@@ -49,5 +50,10 @@ export class StoreService {
   deleteKey(keys: any) {
     const key = btoa(keys);
     this.sessionStorage.clear(key);
+  }
+
+  logout() {
+    this.deleteKey("isLoggedIn")
+    this.route.navigate(['login'])
   }
 }

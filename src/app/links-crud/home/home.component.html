@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="logout">
-            <button>
+            <button (click)="logout()">
                 LOGOUT
             </button>
         </div>
@@ -10,12 +10,12 @@
         </div>
         <div class="home">
             <div class="profile">
-                <img src="/assets/img/perfil.png" alt="">
+                <img [src]="User.avatar" alt="">
                 <p>
-                    Jeff Brown
+                    {{User.name}}
                 </p>
                 <p>
-                    jeff.brown@example.com
+                    {{User.email}}
                 </p>
             </div>
             <div class="data">
@@ -23,32 +23,31 @@
                     <form [formGroup]="linkForm">
                         <div class="form-group">
                             <label for="url">Url To Save</label>
-                            <input type="text" class="form-control" id="url" >
+                            <input formControlName="url" type="text" class="form-control" id="url" >
                             <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                         </div>
                         <div class="form-group mt">
                             <label for="name">Name of Url</label>
-                            <input type="text" class="form-control" id="name">
+                            <input formControlName="name" type="text" class="form-control" id="name">
                             <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                         </div>
                         <div class="button-container">
-                            <button>
+                            <button (click)="addLink()">
                                 ADD
                             </button>
                         </div>
                     </form>
                 </div>
                 <div class="container-link">
-                    <div class="link-card">
-                        <div class="delete">
+                    <div class="link-card" *ngFor="let item of Links; index as i">
+                        <div class="delete" (click)="deleteLink(i)">
                             <img src="/assets/img/delete.svg" alt="">
                         </div>
                         <h2>
-                            www.url.com
+                            {{item.name}}
                         </h2>
                         <p>
-                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint .
-                        </p>
+                            {{item.url}}</p>
                     </div>
                 </div>
             </div>
